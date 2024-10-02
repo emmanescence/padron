@@ -18,7 +18,7 @@ df = cargar_datos(url)
 st.title("Búsqueda por DNI")
 
 # Input para ingresar el DNI
-dni_input = st.text_input("Introduce el DNI:", "")
+dni_input = st.text_input("Introduce el DNI (Sin puntos):", "")
 
 # Si se ingresa un DNI, buscar la fila correspondiente
 if dni_input:

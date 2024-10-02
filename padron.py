@@ -2,12 +2,12 @@ import streamlit as st
 import pandas as pd
 
 # URL del archivo Excel en GitHub (asegúrate de tener el enlace correcto)
-url = "https://github.com/emmanescence/padron/blob/main/Padron.xlsx"
+url = "https://raw.githubusercontent.com/tu-usuario/tu-repositorio/rama/archivo.xlsx"
 
 @st.cache
 def cargar_datos(url):
-    # Cargar el archivo desde el repositorio de GitHub
-    df = pd.read_excel(url)
+    # Cargar el archivo Excel desde GitHub usando el motor openpyxl
+    df = pd.read_excel(url, engine='openpyxl')
     return df
 
 # Cargar los datos
@@ -34,4 +34,3 @@ if dni_input:
             st.write("No se encontró ningún resultado para el DNI ingresado.")
     except ValueError:
         st.write("Por favor, introduce un número válido de DNI.")
-

@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 
 # URL del archivo Excel en GitHub (asegúrate de tener el enlace correcto)
-url = "https://raw.githubusercontent.com/tu-usuario/tu-repositorio/rama/archivo.xlsx"
+url = "https://github.com/emmanescence/padron/blob/main/Padron.xlsx"
 
 @st.cache
 def cargar_datos(url):
